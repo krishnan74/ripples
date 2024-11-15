@@ -1,0 +1,9 @@
+.slide-right-animation {
+  position: absolute;
+  left: -150px;
+  transition: 0.3s;
+}
+
+.slide-right-animation:hover {
+  left: 0;
+}
