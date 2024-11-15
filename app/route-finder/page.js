@@ -111,14 +111,14 @@ const Home = () => {
   };
 
   return (
-    <div className="px-24 pt-[20px] overflow-x-hidden bg-white w-screen pl-[250px] h-screen">
+    <div className="px-24 pt-[20px] overflow-x-hidden  w-screen pl-[250px] h-screen  bg-gray-100">
       <div className="mt-6">
         <input
           type="text"
           placeholder="Search locations..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="border rounded-lg p-2 w-full max-w-md"
+          className="border rounded-lg p-2 w-full max-w-md pl-5"
         />
       </div>
 
@@ -145,7 +145,7 @@ const Home = () => {
             From Location
           </h3>
           {fromLocation ? (
-            <div className="flex flex-col items-center border p-4 rounded-lg h-64 w-56 shadow-md">
+            <div className="flex flex-col items-center border p-4 rounded-lg h-64 w-56 shadow-sm">
               <p className="font-semibold text-lg text-gray-900">
                 {fromLocation.name}
               </p>
@@ -156,6 +156,12 @@ const Home = () => {
                 src={fromLocation.img}
                 alt={fromLocation.name}
               />
+              <p className="mt-3">
+                Latitude: <span>{fromLocation.lat}</span>
+              </p>
+              <p>
+                Longititude: <span>{fromLocation.lng}</span>
+              </p>
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center border p-4 rounded-lg h-64 w-56 text-gray-500">
@@ -186,7 +192,7 @@ const Home = () => {
             To Location
           </h3>
           {toLocation ? (
-            <div className="flex flex-col items-center border p-4 rounded-lg h-64 w-56 shadow-md">
+            <div className="flex flex-col items-center border p-4 rounded-lg h-64 w-56  shadow-sm">
               <p className="font-semibold text-lg text-gray-900">
                 {toLocation.name}
               </p>
@@ -196,7 +202,13 @@ const Home = () => {
                 width={150}
                 src={toLocation.img}
                 alt={toLocation.name}
-              />
+              />{" "}
+              <p className="mt-3">
+                Latitude: <span>{toLocation.lat}</span>
+              </p>
+              <p>
+                Longititude: <span>{toLocation.lng}</span>
+              </p>
             </div>
           ) : (
             <div className="flex flex-col items-center justify-center border p-4 rounded-lg h-64 w-56 text-gray-500">
@@ -234,7 +246,7 @@ const Home = () => {
       {imageUrl && (
         <div className="mt-8 pb-10">
           <h3 className="text-xl font-semibold mb-2">
-            Generated Quantum Circuit:
+            Generated Vector Diagram:
           </h3>
           <img
             src={`data:image/png;base64,${imageUrl}`}

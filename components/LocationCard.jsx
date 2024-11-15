@@ -6,7 +6,7 @@ const LocationCard = (props) => {
 
   return (
     <div
-      className={`flex flex-col p-5 flex-shrink-0 border-2 justify-center items-center text-black rounded-md ${
+      className={`flex flex-col p-5 flex-shrink-0  bg-white border-2 justify-center items-center text-black rounded-md ${
         type === "highlight" ? "border-blue-500" : "border-gray-300"
       }`}
       draggable={true}
@@ -22,7 +22,6 @@ const LocationCard = (props) => {
       <p>
         Longititude: <span>{lng}</span>
       </p>
-
     </div>
   );
 };

@@ -32,11 +32,8 @@ export default function Home() {
   };
 
   return (
-    
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4 w-screen">
-      <h1 className="text-3xl font-bold mb-4 ">
-        Quantum Circuit Generator
-      </h1>
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center pl-[250px] justify-center p-4 w-screen">
+      <h1 className="text-3xl font-bold mb-4 ">Quantum Circuit Generator</h1>
       <textarea
         value={qasmCode}
         onChange={(e) => setQasmCode(e.target.value)}
