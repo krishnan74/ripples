@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Button } from "@/components/ui/button";
 import { FaArrowRight } from "react-icons/fa";
-import "./test.css";
 
 const Home = () => {
   const [formData, setFormData] = useState({
@@ -57,7 +56,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-gray-50 flex flex-col justify-center h-[99vh] px-8 rounded-md">
+    <div className="px-24 pt-[120px] overflow-x-hidden bg-white w-screen pl-[250px] h-screen">
       <div className="flex justify-between">
         <p>Supplier ID:</p>
         <p>Customer ID:</p>
