@@ -25,7 +25,7 @@ import Link from "next/link";
         <p className="text-center p-5 font-bold text-4xl font-['Quantum']">Ripples</p>
           {items.map((item) => (
 
-            <Link href={item.url}  className=" flex justify-start items-center gap-4 px-7 py-3 w-full border border-gray-100 hover:bg-gray-100">
+            <Link href={item.url} key={item.title} className=" flex justify-start items-center gap-4 px-7 py-3 w-full border border-gray-100 hover:bg-gray-100">
                         <item.icon />
                         <p className="text-sm text-nowrap">{item.title}</p>
             </Link>
