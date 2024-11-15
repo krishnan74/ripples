@@ -1,4 +1,5 @@
 import TechStack from "@/components/TechStack";
+import Link from "next/link";
 import React from "react";
 
 const page = () => {
@@ -10,25 +11,46 @@ const page = () => {
           <p className="text-5xl font-bold leading-tight">Ripples</p>
 
           <p className="text-lg mt-5 mb-10 font-light text-gray-700 tracking-wide">
-            A{" "}
-            <span className="text-purple-600 font-semibold">platform</span> for
-            designing, optimizing, and visualizing quantum circuits with advanced
-            machine learning and cutting-edge algorithms.
+            An innovative{" "}
+            <span className="text-purple-600 font-semibold">
+              quantum computing solution{" "}
+            </span>
+            designed to transform supply chain logistics by optimizing delivery
+            routes. By harnessing the power of quantum algorithms, Ripples
+            enables businesses to identify the shortest and most efficient paths
+            for their deliveries, significantly enhancing operational
+            efficiency.
           </p>
 
           <div className="text-lg font-semibold flex gap-8">
             <p>
               <span className="w-[10px] h-[10px] inline-block border-2 border-solid rounded-full mr-3 bg-purple-500"></span>
-              Simulation
+              Quantum Computing
             </p>
             <p>
               <span className="w-[10px] h-[10px] inline-block border-2 border-solid rounded-full mr-3 bg-purple-500"></span>
-              Optimization
+              Supply Chain Optimization
             </p>
             <p>
               <span className="w-[10px] h-[10px] inline-block border-2 border-solid rounded-full mr-3 bg-purple-500"></span>
-              Efficiency
+              Max-H
             </p>
+          </div>
+
+          <div className="flex ">
+            <Link
+              href={"/route-finder"}
+              className="bg-purple-500 text-white px-6 py-3 rounded-lg mt-10 hover:bg-purple-600"
+            >
+              Try Now
+            </Link>
+
+            <Link
+              href={"/generate-circuit"}
+              className="bg-white border-purple-500 border text-purple-500 px-6 py-3 rounded-lg mt-10 ml-5 hover:bg-purple-100"
+            >
+              Convert QASM to Circuit
+            </Link>
           </div>
         </div>
 
@@ -51,87 +73,87 @@ const page = () => {
       </div>
 
       {/* Overview Section */}
-      <div className="mt-20 h-[90vh] px-10 lg:px-24">
-        <p className="text-5xl font-bold text-center mb-20">Overview</p>
+      <div className="mt-20 h-[75vh] px-10 lg:px-24">
+        <p className="text-5xl font-bold text-center mb-5">Overview</p>
+
+        <p className="text-center mb-10">
+          Ripples is a quantum computing-based solution that helps businesses
+          optimize supply chain routes by finding the shortest and most
+          efficient paths for deliveries. By leveraging quantum algorithms,
+          Ripples provides a powerful tool for solving complex logistics
+          problems, enabling businesses to reduce costs and improve operational
+          efficiency through optimized route planning.
+        </p>
         <div className="flex justify-center gap-5">
           {/* Design Card */}
           <div className="h-[350px] w-[280px] border-purple-500 bg-purple-100 border rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all">
-            <p className="text-xl font-semibold">Design</p>
+            <p className="text-xl font-semibold">Quantum Optimization</p>
             <p className="text-sm mt-2 text-gray-600">
-              Ripples provides an intuitive, graphical interface for designing quantum circuits that model and optimize supply chain routes.
+              Utilizes QAOA to solve the Traveling Salesman Problem for
+              efficient route planning.
             </p>
           </div>
 
           {/* Optimization Card */}
           <div className="h-[350px] w-[280px] border-purple-500 bg-purple-100 border rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all">
-            <p className="text-xl font-semibold">Optimization</p>
+            <p className="text-xl font-semibold">Cost Efficiency</p>
             <p className="text-sm mt-2 text-gray-600">
-              Leverage quantum computing to solve combinatorial optimization problems and optimize supply chain routes, costs, and delivery schedules.
+              Minimizes delivery costs, leading to significant savings for
+              businesses.
             </p>
           </div>
 
           {/* Insights Card */}
           <div className="h-[350px] w-[280px] border-purple-500 bg-purple-100 border rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all">
-            <p className="text-xl font-semibold">Insights</p>
+            <p className="text-xl font-semibold">Robust Decision-Making</p>
             <p className="text-sm mt-2 text-gray-600">
-              Gain data-driven insights and visualizations to track performance and identify inefficiencies in your supply chain optimization.
+              Enhances route planning speed and accuracy for improved service
+              delivery
             </p>
           </div>
 
           {/* Analysis Card */}
           <div className="h-[350px] w-[280px] border-purple-500 bg-purple-100 border rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all">
-            <p className="text-xl font-semibold">Analysis</p>
+            <p className="text-xl font-semibold">Scalability</p>
             <p className="text-sm mt-2 text-gray-600">
-              Simulate and analyze real-world supply chain scenarios using quantum circuits, and optimize logistics strategies for maximum efficiency.
+              Adapts to complex logistics scenarios across various industries.
             </p>
           </div>
         </div>
       </div>
 
-       {/* Tech Stack Section */}
-       <div className="mb-20">
+      {/* Tech Stack Section */}
+      <div className="mb-20">
         <p className="text-5xl font-bold text-center mb-10">Tech Stack</p>
         <TechStack />
       </div>
 
-
       {/* System Design Section */}
       <div className="my-20">
-        <p className="text-5xl font-bold text-center mb-5">System Design</p>
-        <div className="flex justify-center">
-          <p className="text-xl text-center font-light mb-[80px] w-[80vw] sm:w-[60vw] text-gray-600">
-            Design image
-          </p>
-        </div>
+        <p className="text-5xl font-bold text-center mb-5">Work Flow</p>
 
-        <div className="flex flex-col justify-center items-center relative w-fit">
+        <div className="flex flex-col justify-center items-center relative w-full">
           <img
-            src="/atom.png"
-            alt="Quantum Atom"
-            className="object-contain h-[400px] w-[400px] animate-pulse"
+            src="/images/workflow.png"
+            alt="WorkFlow"
+            className="object-contain "
           />
         </div>
       </div>
-      
+
       {/* Work Flow Section */}
       <div className="my-20">
         <p className="text-5xl font-bold text-center mb-5">System Design</p>
-        <div className="flex justify-center">
-          <p className="text-xl text-center font-light mb-[80px] w-[80vw] sm:w-[60vw] text-gray-600">
-            Design image
-          </p>
-        </div>
 
-        <div className="flex flex-col justify-center items-center relative w-fit">
+        <div className="flex flex-col justify-center items-center relative w-full">
           <img
-            src="/atom.png"
-            alt="Quantum Atom"
-            className="object-contain h-[400px] w-[400px] animate-pulse"
+            src="/images/system-design.png"
+            alt="SystemDesign"
+            className="object-contain "
           />
         </div>
       </div>
 
-     
       {/* Optional Sponsors Section */}
       {/* <div>
         <Sponsers />
