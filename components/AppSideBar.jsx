@@ -1,5 +1,5 @@
 // AppSidebar.js
-import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
+import { Calendar, Home, Inbox, Search, Settings, Route } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -13,10 +13,7 @@ import {
 
 const items = [
   { title: "Home", url: "#", icon: Home },
-  { title: "Inbox", url: "#", icon: Inbox },
-  { title: "Calendar", url: "#", icon: Calendar },
-  { title: "Search", url: "#", icon: Search },
-  { title: "Settings", url: "#", icon: Settings },
+  { title: "Route", url: "#", icon: Route },
 ];
 
 export function AppSidebar() {
@@ -24,7 +21,9 @@ export function AppSidebar() {
     <Sidebar collapsible="icon">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Application</SidebarGroupLabel>
+          <SidebarGroupLabel>
+            <p className="text-3xl">Ripples</p>
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (

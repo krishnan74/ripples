@@ -6,7 +6,7 @@ const LocationCard = (props) => {
 
   return (
     <div
-      className="flex flex-col p-5 flex-shrink-0 border-2 justify-center items-center text-[#212121]  rounded-md"
+      className="flex flex-col p-5 flex-shrink-0 border-2 justify-center items-center text-white  rounded-md"
       draggable
       onDragStart={(e) => onDragStart(e, Location)}
     >
