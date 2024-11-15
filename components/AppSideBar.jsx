@@ -1,5 +1,13 @@
 // AppSidebar.js
-import { Calendar, Home, Inbox, Search, Settings, Route } from "lucide-react";
+import {
+  Calendar,
+  Home,
+  Inbox,
+  Search,
+  Settings,
+  Route,
+  Cpu,
+} from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -12,8 +20,9 @@ import {
 } from "@/components/ui/sidebar";
 
 const items = [
-  { title: "Home", url: "#", icon: Home },
-  { title: "Route", url: "#", icon: Route },
+  { title: "Home", url: "/", icon: Home },
+  { title: "Route", url: "/route-finder", icon: Route },
+  { title: "QASM to Circuit", url: "/generate-circuit", icon: Cpu },
 ];
 
 export function AppSidebar() {
@@ -22,7 +31,7 @@ export function AppSidebar() {
       <SidebarContent>
         <SidebarGroup>
           <SidebarGroupLabel>
-            <p className="text-3xl">Ripples</p>
+            <p className="text-lg mb-5 ">Ripples</p>
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
